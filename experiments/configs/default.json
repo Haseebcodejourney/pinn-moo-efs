@@ -1,0 +1,28 @@
+{
+  "benchmarks": ["burgers", "poisson"],
+  "epochs_per_candidate": 2500,
+  "seed": 42,
+  "network": { "hidden_dim": 50, "n_layers": 4 },
+  "burgers_obs_sweep": {
+    "n_obs": [5, 10, 20, 50, 100],
+    "noise_sigma": [0.0, 0.01, 0.05, 0.1]
+  },
+  "moo": {
+    "nsga2": { "pop_size": 10, "generations": 6 },
+    "nsga3": { "pop_size": 12, "generations": 6, "n_partitions": 8 },
+    "variables": {
+      "lam_data": [0.001, 10.0],
+      "lam_pde": [0.001, 10.0],
+      "n_collocation": [50, 500]
+    }
+  },
+  "efs": { "pop_size": 20, "generations": 30 },
+  "objectives": ["f1_l2_error", "f2_pde_residual", "f3_data_budget"],
+  "selection_methods": [
+    "baseline_fixed_weights",
+    "ideal_point",
+    "knee_point",
+    "static_fuzzy",
+    "evolved_fuzzy"
+  ]
+}

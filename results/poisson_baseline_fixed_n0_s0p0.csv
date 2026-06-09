@@ -1,0 +1,2 @@
+pde,algorithm,n_obs,obs_noise,f1_l2_error,f2_pde_residual,f3_data_budget,lam_data,lam_pde,n_collocation,balancer,hidden_dim,n_layers
+poisson,baseline_fixed,0.0,0.0,0.0004969539004378021,0.009679308161139488,200.0,1.0,1.0,200.0,fixed,50.0,4.0

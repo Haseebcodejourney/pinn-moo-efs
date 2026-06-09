@@ -1,0 +1,2 @@
+f1_l2_error,f2_pde_residual,f3_data_budget,pde,lam_data,lam_pde,n_collocation,n_obs,obs_noise,balancer,hidden_dim,n_layers,algorithm
+0.7053085072809145,0.035935916006565094,200.0,burgers,10.0,1.0,200.0,0,0,fixed,50.0,4.0,baseline_fixed

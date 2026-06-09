@@ -1,0 +1,2 @@
+pde,algorithm,n_obs,obs_noise,f1_l2_error,f2_pde_residual,f3_data_budget,lam_data,lam_pde,n_collocation,balancer,hidden_dim,n_layers
+burgers,baseline_fixed,20.0,0.05,,,220.0,1.0,1.0,200.0,fixed,50.0,4.0
