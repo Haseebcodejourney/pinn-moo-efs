@@ -1,0 +1,4 @@
+pde,algorithm,n_obs,obs_noise,lam_data,lam_pde,n_collocation,balancer,hidden_dim,n_layers,f1_l2_error,f2_pde_residual,f3_data_budget,seed
+burgers,baseline_fixed,0,0.0,10.0,1.0,200,fixed,50,4,0.505604894491994,0.338362455368042,200.0,0
+burgers,baseline_fixed,0,0.0,10.0,1.0,200,fixed,50,4,0.40476872439377354,0.2991255223751068,200.0,1
+burgers,baseline_fixed,0,0.0,10.0,1.0,200,fixed,50,4,0.4268227055560279,0.28396105766296387,200.0,2

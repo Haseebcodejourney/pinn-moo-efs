@@ -1,0 +1,7 @@
+comparison,metric,baseline_mean,baseline_std,candidate_mean,candidate_std,p_value,significant,n_seeds_paired,interpretation
+baseline_fixed_vs_burgers_grid_clean,best_f1_l2_per_seed,0.45252965775925597,0.04684001168680341,0.37742551933679486,0.06051409796241107,0.125,False,5,No significant difference (p=0.1250 >= 0.05)
+baseline_fixed_vs_burgers_grid_gradnorm,best_f1_l2_per_seed,0.45252965775925597,0.04684001168680341,0.8643565981162356,0.09263747528944302,0.0625,False,5,No significant difference (p=0.0625 >= 0.05)
+baseline_fixed_vs_burgers_grid_relobralo,best_f1_l2_per_seed,0.45252965775925597,0.04684001168680341,0.451835997403326,0.059043238943768644,1.0,False,5,No significant difference (p=1.0000 >= 0.05)
+baseline_fixed_vs_burgers_nsga2_clean,best_f1_l2_per_seed,0.45252965775925597,0.04684001168680341,0.28880487193876275,0.031021204600673365,0.0625,False,5,No significant difference (p=0.0625 >= 0.05)
+baseline_fixed_vs_burgers_nsga3_clean,best_f1_l2_per_seed,0.45252965775925597,0.04684001168680341,0.3175193101430284,0.043813930921333184,0.0625,False,5,No significant difference (p=0.0625 >= 0.05)
+baseline_fixed_vs_burgers_moead_clean,best_f1_l2_per_seed,0.45252965775925597,0.04684001168680341,0.3227316887123976,0.08588673041154005,0.125,False,5,No significant difference (p=0.1250 >= 0.05)

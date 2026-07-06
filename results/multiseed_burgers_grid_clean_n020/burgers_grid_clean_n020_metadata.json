@@ -1,0 +1,12 @@
+{
+  "experiment": "burgers_grid_clean_n020",
+  "context": {
+    "epochs": 500,
+    "n_obs": 20,
+    "method": "Grid"
+  },
+  "n_seeds": 3,
+  "n_rows": 36,
+  "real_data": true,
+  "csv": "C:\\Users\\micro\\OneDrive\\Desktop\\Data Science and Artificial Intelligence\\research project\\results\\multiseed_burgers_grid_clean_n020\\burgers_grid_clean_n020_all_seeds.csv"
+}

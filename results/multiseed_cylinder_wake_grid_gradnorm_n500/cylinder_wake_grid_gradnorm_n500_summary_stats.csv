@@ -1,0 +1,2 @@
+pde,algorithm,n_obs,obs_noise,n_seeds,f1_l2_mean,f1_l2_std,f2_res_mean,f2_res_std,f3_budget_mean,f3_budget_std
+cylinder_wake,grid_gradnorm,500.0,0.0,3,0.5096392697758145,0.010744871791369683,0.009667776654370956,0.007458903397135312,700.0,86.60254037844386

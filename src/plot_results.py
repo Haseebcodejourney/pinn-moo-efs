@@ -81,25 +81,38 @@ def plot_pareto(df: pd.DataFrame, out_dir: Path, prefix: str = "") -> None:
     pareto = pareto_nondominated(df)
     f3 = "f3_data_budget" if "f3_data_budget" in df.columns else "f3_n_collocation"
 
+    # Pareto points first (drawn below) so "All" stays visible on top
     fig, ax = plt.subplots(figsize=(6, 4))
-    ax.scatter(df["f1_l2_error"], df["f2_pde_residual"], c="lightgray", label="All", s=35)
-    ax.scatter(pareto["f1_l2_error"], pareto["f2_pde_residual"], c="crimson", label="Pareto", s=55)
+    ax.scatter(
+        pareto["f1_l2_error"], pareto["f2_pde_residual"],
+        c="crimson", label="Pareto", s=70, zorder=3, edgecolors="white",
+    )
+    ax.scatter(
+        df["f1_l2_error"], df["f2_pde_residual"],
+        c="#7f7f7f", label=f"All evaluated (n={len(df)})", s=30, alpha=0.85, zorder=2,
+    )
     ax.set_xlabel("f1: Relative L2 error")
     ax.set_ylabel("f2: Mean PDE residual")
     ax.set_title("Accuracy vs Physics Consistency")
-    ax.legend()
+    ax.legend(loc="best", framealpha=0.9)
     ax.grid(alpha=0.3)
     fig.tight_layout()
     fig.savefig(out_dir / f"{prefix}fig_pareto_f1_f2.png", dpi=200)
     plt.close(fig)
 
     fig, ax = plt.subplots(figsize=(6, 4))
-    ax.scatter(df["f1_l2_error"], df[f3], c="lightgray", label="All", s=35)
-    ax.scatter(pareto["f1_l2_error"], pareto[f3], c="steelblue", label="Pareto", s=55)
+    ax.scatter(
+        pareto["f1_l2_error"], pareto[f3],
+        c="steelblue", label="Pareto", s=70, zorder=3, edgecolors="white",
+    )
+    ax.scatter(
+        df["f1_l2_error"], df[f3],
+        c="#7f7f7f", label=f"All evaluated (n={len(df)})", s=30, alpha=0.85, zorder=2,
+    )
     ax.set_xlabel("f1: Relative L2 error")
     ax.set_ylabel("f3: Data budget")
     ax.set_title("Accuracy vs Data Cost")
-    ax.legend()
+    ax.legend(loc="best", framealpha=0.9)
     ax.grid(alpha=0.3)
     fig.tight_layout()
     fig.savefig(out_dir / f"{prefix}fig_pareto_f1_f3.png", dpi=200)
@@ -142,7 +155,17 @@ def build_summary_table(df: pd.DataFrame, efs_params: FuzzyRuleParams | None = N
     pareto_rows = pareto_df.to_dict(orient="records")
     selections = compare_selections(pareto_rows, efs_params=efs_params)
 
-    hv = hypervolume(pareto_rows)
+    # Explicit nadir = worst-observed + 10% span per objective.
+    # The reviewer explicitly required this to be stated.
+    pts = np.array(
+        [[p["f1_l2_error"], p["f2_pde_residual"], p["f3_data_budget"]] for p in pareto_rows]
+    )
+    lo = pts.min(axis=0)
+    hi = pts.max(axis=0)
+    span = np.maximum(hi - lo, 1e-8)
+    nadir = hi + 0.10 * span
+
+    hv = hypervolume(pareto_rows, ref_point=nadir)
     sp = spacing(pareto_rows)
 
     rows = []
@@ -153,6 +176,9 @@ def build_summary_table(df: pd.DataFrame, efs_params: FuzzyRuleParams | None = N
         "obs_noise": float(df["obs_noise"].iloc[0]) if "obs_noise" in df.columns else 0.0,
         "hypervolume": hv,
         "spacing": sp,
+        "nadir_f1": float(nadir[0]),
+        "nadir_f2": float(nadir[1]),
+        "nadir_f3": float(nadir[2]),
         "n_pareto": len(pareto_rows),
         "n_runs": len(df),
     }

@@ -1,0 +1,13 @@
+{
+  "experiment": "cylinder_wake_grid_clean_n200",
+  "context": {
+    "epochs": 400,
+    "n_obs": 200,
+    "method": "Grid"
+  },
+  "n_seeds": 3,
+  "n_rows": 36,
+  "real_data": true,
+  "data_source": "cylinder_nektar_wake.mat (Raissi 2019 PINNs repo)",
+  "csv": "C:\\Users\\micro\\OneDrive\\Desktop\\Data Science and Artificial Intelligence\\research project\\results\\multiseed_cylinder_wake_grid_clean_n200\\cylinder_wake_grid_clean_n200_all_seeds.csv"
+}

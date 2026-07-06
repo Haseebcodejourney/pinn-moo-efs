@@ -1,0 +1,11 @@
+{
+  "experiment": "burgers_nsga2_clean",
+  "context": {
+    "epochs": 500,
+    "pop": 5,
+    "gen": 3
+  },
+  "n_seeds": 3,
+  "n_rows": 15,
+  "csv": "C:\\Users\\micro\\OneDrive\\Desktop\\Data Science and Artificial Intelligence\\research project\\results\\multiseed_burgers_nsga2_clean\\burgers_nsga2_clean_all_seeds.csv"
+}

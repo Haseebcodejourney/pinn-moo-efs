@@ -1,0 +1,27 @@
+{
+  "experiment_name": "burgers_grid_relobralo",
+  "n_seeds": 5,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "successful_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_total_runs": 15,
+  "metric_columns": [
+    "lam_data",
+    "lam_pde",
+    "n_collocation",
+    "f1_l2_error",
+    "f2_pde_residual",
+    "f3_data_budget"
+  ]
+}

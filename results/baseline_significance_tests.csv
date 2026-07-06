@@ -1,0 +1,7 @@
+candidate,metric_f1_p_value,metric_f1_significant,f1_candidate_mean,f1_candidate_std,metric_f2_p_value,metric_f2_significant,f2_candidate_mean,f2_candidate_std,n_seeds_paired,f1_interpretation,f2_interpretation
+Grid search,0.5,False,0.4013914381661252,0.054536414863601695,0.25,False,0.022464773928125664,0.0011935280463430417,3,No significant difference (p=0.5000 >= 0.05),No significant difference (p=0.2500 >= 0.05)
+GradNorm (Chen et al. 2018),0.25,False,0.8166728135979695,0.08231884787813232,0.25,False,0.0013279996734733002,0.00016676029031834053,3,No significant difference (p=0.2500 >= 0.05),No significant difference (p=0.2500 >= 0.05)
+ReLoBRaLo (Bischof & Kraus 2021),0.5,False,0.4688602774012269,0.013286472885535581,0.25,False,0.058302904168764734,0.0033606532865637427,3,No significant difference (p=0.5000 >= 0.05),No significant difference (p=0.2500 >= 0.05)
+NSGA-II (Deb et al. 2002),0.75,False,0.39540819633581176,0.052189978915834184,0.25,False,0.01678309186051283,0.010278771003275783,3,No significant difference (p=0.7500 >= 0.05),No significant difference (p=0.2500 >= 0.05)
+NSGA-III (Jain & Deb 2014),0.25,False,0.3047440317073504,0.05348894160861414,0.25,False,0.015294984914362366,0.007151248399378123,3,No significant difference (p=0.2500 >= 0.05),No significant difference (p=0.2500 >= 0.05)
+MOEA/D (Zhang & Li 2007),0.5,False,0.35393419310079444,0.1053654294204405,0.25,False,0.06505059202512103,0.028473591029011265,3,No significant difference (p=0.5000 >= 0.05),No significant difference (p=0.2500 >= 0.05)

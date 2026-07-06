@@ -2,11 +2,20 @@
 
 from __future__ import annotations
 
+import os
+
 import numpy as np
 import torch
 NU = 0.01 / np.pi
 X_MIN, X_MAX = -1.0, 1.0
 T_MIN, T_MAX = 0.0, 1.0
+
+# When PINN_USE_REAL_DATA=1, sample_observations delegates to
+# real_data_burgers.sample_real_observations, which uses a high-fidelity
+# Radau reference (1024 x 512) as ground truth with a noise sigma derived
+# from subsampling interpolation error (non-arbitrary). See
+# src/real_data_burgers.py for the derivation.
+USE_REAL_DATA = os.environ.get("PINN_USE_REAL_DATA", "0") == "1"
 
 
 def initial_condition(x: np.ndarray) -> np.ndarray:
@@ -129,6 +138,21 @@ def evaluation_grid(nt: int = 100, nx: int = 256) -> torch.Tensor:
 
 
 def sample_observations(n_obs: int, noise_sigma: float, seed: int | None = None) -> tuple[torch.Tensor, torch.Tensor]:
+    """Sample (t, x, u) observation triples.
+
+    If the module-level USE_REAL_DATA flag is set, observations are drawn
+    from a high-fidelity Radau reference (see src/real_data_burgers.py).
+    Otherwise the standard synthetic path is used.
+
+    In the real-data path, ``noise_sigma`` is interpreted as an override:
+    if > 0, that value is added on top of the derived subsampling noise;
+    if <= 0, only the derived subsampling noise is applied.
+    """
+    if USE_REAL_DATA:
+        from real_data_burgers import sample_real_observations as _sample_real
+        sigma_override = noise_sigma if noise_sigma > 0 else None
+        return _sample_real(n_obs=n_obs, seed=seed, sigma=sigma_override)
+
     rng = np.random.default_rng(seed)
     t = rng.uniform(T_MIN, T_MAX, size=n_obs)
     x = rng.uniform(X_MIN, X_MAX, size=n_obs)

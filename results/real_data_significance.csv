@@ -1,0 +1,7 @@
+n_obs,candidate,p_value,significant,candidate_mean,candidate_std,n_seeds_paired,interpretation
+20,GradNorm (real-data),0.25,False,0.6949541657231187,0.11312582969773585,3,No significant difference (p=0.2500 >= 0.05)
+20,ReLoBRaLo (real-data),0.25,False,0.48332978193051535,0.04705995024507991,3,No significant difference (p=0.2500 >= 0.05)
+50,GradNorm (real-data),0.25,False,0.763936968669989,0.1247725926989648,3,No significant difference (p=0.2500 >= 0.05)
+50,ReLoBRaLo (real-data),0.25,False,0.44804203962885464,0.007410686534106413,3,No significant difference (p=0.2500 >= 0.05)
+100,GradNorm (real-data),0.25,False,0.7586314670600781,0.12301838019476412,3,No significant difference (p=0.2500 >= 0.05)
+100,ReLoBRaLo (real-data),0.25,False,0.42495319356973144,0.012403947821978184,3,No significant difference (p=0.2500 >= 0.05)

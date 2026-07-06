@@ -1,0 +1,7 @@
+n_obs,candidate,p_value,significant,candidate_mean,candidate_std,n_seeds_paired,interpretation
+50,GradNorm (cylinder wake),0.25,False,0.5081486304601034,0.004374161271384985,3,No significant difference (p=0.2500 >= 0.05)
+50,ReLoBRaLo (cylinder wake),0.25,False,0.48351239164670307,0.00165580278084269,3,No significant difference (p=0.2500 >= 0.05)
+200,GradNorm (cylinder wake),0.25,False,0.5029336313406626,0.009073520214959243,3,No significant difference (p=0.2500 >= 0.05)
+200,ReLoBRaLo (cylinder wake),0.25,False,0.49241089820861816,0.004906210337611136,3,No significant difference (p=0.2500 >= 0.05)
+500,GradNorm (cylinder wake),0.25,False,0.5003344714641571,0.005222782932132508,3,No significant difference (p=0.2500 >= 0.05)
+500,ReLoBRaLo (cylinder wake),0.25,False,0.4871035615603129,0.0023412591393052995,3,No significant difference (p=0.2500 >= 0.05)

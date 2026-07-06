@@ -9,6 +9,7 @@ from adaptive_balancers import GradNormBalancer, ReLoBRaLoBalancer
 from objectives import evaluate_objectives
 from pde_registry import get_pde
 import pde_burgers  # noqa: F401 — register PDEs
+import pde_cylinder_wake  # noqa: F401 — register PDEs (real experimental cylinder wake)
 import pde_poisson  # noqa: F401
 from pinn import PINN
 
@@ -41,7 +42,7 @@ def train_pinn(
     n_collocation = int(max(20, n_collocation))
     n_obs = int(max(0, n_obs))
 
-    model = PINN(input_dim=pde.input_dim, hidden_dim=hidden_dim, n_layers=n_layers).to(device)
+    model = PINN(input_dim=pde.input_dim, hidden_dim=hidden_dim, n_layers=n_layers, output_dim=pde.output_dim).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
     mse = nn.MSELoss()
 
@@ -73,7 +74,7 @@ def train_pinn(
         data_terms = []
         if tx_ic is not None and u_ic is not None:
             data_terms.append(mse(model(tx_ic), u_ic))
-        data_terms.append(mse(model(tx_bc), torch.zeros(tx_bc.shape[0], 1, device=device)))
+        data_terms.append(mse(model(tx_bc), torch.zeros(tx_bc.shape[0], pde.output_dim, device=device)))
         if tx_obs is not None and u_obs is not None:
             data_terms.append(mse(model(tx_obs), u_obs))
         loss_data = sum(data_terms) / len(data_terms)

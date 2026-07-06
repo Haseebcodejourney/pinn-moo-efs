@@ -1,3 +1,3 @@
-method,pde,algorithm,n_obs,obs_noise,lam_data,lam_pde,n_collocation,f1_l2_error,f2_pde_residual,f3_data_budget,balancer,hidden_dim,n_layers,fuzzy_score,balanced_loss
-static_fuzzy,poisson,grid,0.0,0.0,1.0,10.0,100.0,0.0013815093552693,0.007836983539164,100.0,fixed,50.0,4.0,0.8589008989819267,1.0000921849289344
-evolved_fuzzy,poisson,grid,0.0,0.0,10.0,10.0,200.0,0.0001012863212963,0.0032346621155738,200.0,fixed,50.0,4.0,0.7640269733893384,1.0000166797421794
+method,pde,algorithm,n_obs,obs_noise,lam_data,lam_pde,n_collocation,f1_l2_error,f2_pde_residual,f3_data_budget,fuzzy_score,balanced_loss
+static_fuzzy,burgers,nsga2,0,0.0,2.3387161337722726,4.366331350851715,96,0.2834394198620377,0.0101186046376824,96.0,0.7298724498261775,1.0030578960885284
+evolved_fuzzy,burgers,nsga2,0,0.0,2.3387161337722726,4.366331350851715,96,0.2834394198620377,0.0101186046376824,96.0,0.7298724498261775,1.0030578960885284

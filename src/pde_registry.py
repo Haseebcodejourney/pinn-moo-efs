@@ -22,6 +22,7 @@ class PDEProblem:
     ic_target: Callable[[torch.Tensor], torch.Tensor] | None
     sample_observations: Callable[[int, float, int | None], tuple[torch.Tensor, torch.Tensor]]
     coord_slices: tuple[slice, ...]  # slices into input tensor for reference lookup
+    output_dim: int = 1  # 1 for scalar PDEs, >1 for multi-field PDEs (e.g. NS)
 
 
 _REGISTRY: dict[str, PDEProblem] = {}

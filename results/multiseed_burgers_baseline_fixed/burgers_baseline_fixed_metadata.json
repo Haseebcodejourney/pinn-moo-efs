@@ -1,0 +1,11 @@
+{
+  "experiment": "burgers_baseline_fixed",
+  "context": {
+    "epochs": 500,
+    "pop": 5,
+    "gen": 3
+  },
+  "n_seeds": 3,
+  "n_rows": 3,
+  "csv": "C:\\Users\\micro\\OneDrive\\Desktop\\Data Science and Artificial Intelligence\\research project\\results\\multiseed_burgers_baseline_fixed\\burgers_baseline_fixed_all_seeds.csv"
+}

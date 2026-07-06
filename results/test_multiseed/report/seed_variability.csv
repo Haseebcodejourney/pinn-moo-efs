@@ -1,0 +1,2 @@
+pde,algorithm,n_obs_cv,obs_noise_cv,lam_data_cv,lam_pde_cv,n_collocation_cv,f1_l2_error_cv,f2_pde_residual_cv,f3_data_budget_cv,hidden_dim_cv,n_layers_cv
+poisson,grid,,,0.8450145482634364,0.8450145482634364,0.34426518632954817,1.1434760516293356,0.43271218826445873,0.34426518632954817,0.0,0.0

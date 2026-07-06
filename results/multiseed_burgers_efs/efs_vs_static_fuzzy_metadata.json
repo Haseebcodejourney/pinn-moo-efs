@@ -1,0 +1,32 @@
+{
+  "experiment_name": "efs_vs_static_fuzzy",
+  "n_seeds": 2,
+  "seeds": [
+    42,
+    99
+  ],
+  "successful_seeds": [
+    42,
+    99
+  ],
+  "n_total_runs": 2,
+  "metric_columns": [
+    "n_pareto_points",
+    "static_fuzzy_balanced_loss",
+    "evolved_fuzzy_balanced_loss",
+    "efs_improvement_abs",
+    "efs_improvement_pct",
+    "efs_better",
+    "static_f1_l2_error",
+    "static_f2_pde_residual",
+    "static_f3_data_budget",
+    "evolved_f1_l2_error",
+    "evolved_f2_pde_residual",
+    "evolved_f3_data_budget",
+    "pareto_hypervolume",
+    "pareto_hypervolume_nadir_f1",
+    "pareto_hypervolume_nadir_f2",
+    "pareto_hypervolume_nadir_f3",
+    "pareto_spacing"
+  ]
+}

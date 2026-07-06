@@ -1,0 +1,19 @@
+{
+  "n_groups": 1,
+  "metric_columns": [
+    "n_obs",
+    "obs_noise",
+    "lam_data",
+    "lam_pde",
+    "n_collocation",
+    "f1_l2_error",
+    "f2_pde_residual",
+    "f3_data_budget",
+    "hidden_dim",
+    "n_layers"
+  ],
+  "groupby_columns": [
+    "pde",
+    "algorithm"
+  ]
+}

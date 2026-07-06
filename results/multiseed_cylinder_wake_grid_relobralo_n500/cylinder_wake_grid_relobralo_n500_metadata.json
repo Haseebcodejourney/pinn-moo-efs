@@ -1,0 +1,13 @@
+{
+  "experiment": "cylinder_wake_grid_relobralo_n500",
+  "context": {
+    "epochs": 400,
+    "n_obs": 500,
+    "method": "ReLoBRaLo"
+  },
+  "n_seeds": 3,
+  "n_rows": 9,
+  "real_data": true,
+  "data_source": "cylinder_nektar_wake.mat (Raissi 2019 PINNs repo)",
+  "csv": "C:\\Users\\micro\\OneDrive\\Desktop\\Data Science and Artificial Intelligence\\research project\\results\\multiseed_cylinder_wake_grid_relobralo_n500\\cylinder_wake_grid_relobralo_n500_all_seeds.csv"
+}

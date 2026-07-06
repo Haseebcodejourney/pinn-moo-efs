@@ -1,0 +1,10 @@
+pde,algorithm,n_obs,obs_noise,lam_data,lam_pde,n_collocation,balancer,f1_l2_error,f2_pde_residual,f3_data_budget,hidden_dim,n_layers,seed,real_data,data_source
+cylinder_wake,grid_gradnorm,50.0,0.0,1.0,1.0,100.0,gradnorm,0.523493230342865,0.004136319272220135,150.0,50.0,4.0,0,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_gradnorm,50.0,0.0,1.0,1.0,200.0,gradnorm,0.5111972689628601,0.01846807636320591,250.0,50.0,4.0,0,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_gradnorm,50.0,0.0,1.0,1.0,300.0,gradnorm,0.5123720765113831,0.0031359409913420677,350.0,50.0,4.0,0,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_gradnorm,50.0,0.0,1.0,1.0,100.0,gradnorm,0.5101118087768555,0.006513075437396765,150.0,50.0,4.0,1,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_gradnorm,50.0,0.0,1.0,1.0,200.0,gradnorm,0.5108178853988647,0.0031656050123274326,250.0,50.0,4.0,1,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_gradnorm,50.0,0.0,1.0,1.0,300.0,gradnorm,0.55911785364151,0.015176563523709774,350.0,50.0,4.0,1,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_gradnorm,50.0,0.0,1.0,1.0,100.0,gradnorm,0.5122218728065491,0.0029223663732409477,150.0,50.0,4.0,2,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_gradnorm,50.0,0.0,1.0,1.0,200.0,gradnorm,0.5557045936584473,0.014130931347608566,250.0,50.0,4.0,2,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_gradnorm,50.0,0.0,1.0,1.0,300.0,gradnorm,0.5031368136405945,0.02419094927608967,350.0,50.0,4.0,2,True,cylinder_nektar_wake.mat

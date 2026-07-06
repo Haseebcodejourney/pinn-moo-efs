@@ -10,30 +10,36 @@ from pde_registry import PDEProblem, get_pde
 
 @torch.no_grad()
 def relative_l2_error(model: torch.nn.Module, pde: PDEProblem, device: torch.device) -> float:
+    """f1: relative L2 error between prediction and reference, averaged over outputs."""
     coords = pde.evaluation_grid().to(device)
-    pred = model(coords).cpu().numpy().ravel()
+    pred = model(coords).cpu().numpy()
 
-    if pde.input_dim == 2:
+    if pde.input_dim == 1:
+        x = coords[:, 0].cpu().numpy()
+        truth = pde.reference_solution(x, None)
+    elif pde.input_dim == 2:
         t = coords[:, 0].cpu().numpy()
         x = coords[:, 1].cpu().numpy()
         truth = pde.reference_solution(t, x)
-    else:
-        x = coords[:, 0].cpu().numpy()
-        truth = pde.reference_solution(x, None)
+    else:  # 3D, e.g. cylinder wake (x, y, t)
+        truth = pde.reference_solution(coords.cpu().numpy(), None)
 
-    num = np.linalg.norm(pred - truth.ravel())
-    den = np.linalg.norm(truth.ravel()) + 1e-12
+    pred = np.asarray(pred).reshape(-1)
+    truth = np.asarray(truth).reshape(-1)
+    num = np.linalg.norm(pred - truth)
+    den = np.linalg.norm(truth) + 1e-12
     return float(num / den)
 
 
 def mean_pde_residual(model: torch.nn.Module, pde: PDEProblem, tx_coll: torch.Tensor) -> float:
+    """f2: mean absolute PDE residual at collocation points."""
     model.eval()
     residual = pde.residual_fn(model, tx_coll)
     return float(residual.abs().mean().detach().cpu().item())
 
 
 def data_efficiency_cost(n_collocation: int, n_obs: int = 0) -> float:
-    """f3: total synthetic data budget (collocation + sparse observations)."""
+    """f3: total data budget (collocation + sparse observations)."""
     return float(n_collocation + n_obs)
 
 

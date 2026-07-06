@@ -1,0 +1,6 @@
+f1_l2_error,f2_pde_residual,f3_data_budget,pde,lam_data,lam_pde,n_collocation,n_obs,obs_noise,balancer,hidden_dim,n_layers,algorithm,seed
+0.505604894491994,0.32646405696868896,200.0,burgers,10.0,1.0,200.0,0,0,fixed,50.0,4.0,baseline_fixed,0
+0.40476872439377354,0.2428111881017685,200.0,burgers,10.0,1.0,200.0,0,0,fixed,50.0,4.0,baseline_fixed,1
+0.4268227055560279,0.2563534677028656,200.0,burgers,10.0,1.0,200.0,0,0,fixed,50.0,4.0,baseline_fixed,2
+0.500203187344174,0.24082642793655396,200.0,burgers,10.0,1.0,200.0,0,0,fixed,50.0,4.0,baseline_fixed,3
+0.4252487770103107,0.21373474597930908,200.0,burgers,10.0,1.0,200.0,0,0,fixed,50.0,4.0,baseline_fixed,4

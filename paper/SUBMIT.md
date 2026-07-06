@@ -4,11 +4,19 @@
 
 | Item | Location |
 |------|----------|
-| Full codebase | `src/`, `run_experiment.py`, `finish_all.py` |
-| Final results | `results/summary_table.csv` |
+| Full codebase | `src/`, `run_experiment.py`, `finish_all_multiseed.py` |
+| Multi-seed results | `results/multiseed_*.csv` |
 | Figures | `results/figures/` |
-| Paper draft (8 pages) | `paper/draft.md` |
+| Paper draft (full) | `paper/LMNotes_full_paper.md` |
+| **Updated PDF (July 2026)** | `paper/PINN_MOO_EFS_paper_revised.pdf` |
+| **Updated DOCX (editable)** | `paper/PINN_MOO_EFS_paper_revised.docx` |
 | 24 references | `paper/references.bib` |
+
+Rebuild PDF after editing markdown:
+
+```bash
+python paper/build_pdf.py
+```
 
 ## Key results (from `summary_table.csv`)
 

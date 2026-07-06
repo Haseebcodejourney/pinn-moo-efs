@@ -1,0 +1,2 @@
+pde,algorithm,n_obs,obs_noise,n_seeds,f1_l2_mean,f1_l2_std,f2_res_mean,f2_res_std,f3_budget_mean,f3_budget_std
+cylinder_wake,grid_relobralo,500.0,0.0,3,0.491536686817805,0.004613926161620925,0.024342877169450123,0.0029555762525120643,700.0,86.60254037844386

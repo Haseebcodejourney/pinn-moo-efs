@@ -1,0 +1,10 @@
+pde,algorithm,n_obs,obs_noise,lam_data,lam_pde,n_collocation,balancer,f1_l2_error,f2_pde_residual,f3_data_budget,hidden_dim,n_layers,seed,real_data,data_source
+cylinder_wake,grid_relobralo,200.0,0.0,1.0,1.0,100.0,relobralo,0.4868091642856598,0.02524363249540329,300.0,50.0,4.0,0,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_relobralo,200.0,0.0,1.0,1.0,200.0,relobralo,0.5011535882949829,0.02897017076611519,400.0,50.0,4.0,0,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_relobralo,200.0,0.0,1.0,1.0,300.0,relobralo,0.4976855218410492,0.024696463719010353,500.0,50.0,4.0,0,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_relobralo,200.0,0.0,1.0,1.0,100.0,relobralo,0.5017867684364319,0.02322816289961338,300.0,50.0,4.0,1,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_relobralo,200.0,0.0,1.0,1.0,200.0,relobralo,0.49899688363075256,0.0242508165538311,400.0,50.0,4.0,1,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_relobralo,200.0,0.0,1.0,1.0,300.0,relobralo,0.4959441125392914,0.023190977051854134,500.0,50.0,4.0,1,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_relobralo,200.0,0.0,1.0,1.0,100.0,relobralo,0.4955674707889557,0.019367050379514694,300.0,50.0,4.0,2,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_relobralo,200.0,0.0,1.0,1.0,200.0,relobralo,0.4944794178009033,0.025086622685194016,400.0,50.0,4.0,2,True,cylinder_nektar_wake.mat
+cylinder_wake,grid_relobralo,200.0,0.0,1.0,1.0,300.0,relobralo,0.5010468363761902,0.02830369956791401,500.0,50.0,4.0,2,True,cylinder_nektar_wake.mat

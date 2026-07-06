@@ -1,0 +1,2 @@
+pde,algorithm,n_obs,obs_noise,n_seeds,f1_l2_mean,f1_l2_std,f2_res_mean,f2_res_std,f3_budget_mean,f3_budget_std
+burgers,grid_gradnorm,100.0,0.0,3,0.8675185255789316,0.1080646806393233,0.009780633095134463,0.013145996269090195,300.0,86.60254037844386
